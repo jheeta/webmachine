@@ -134,7 +134,7 @@ log_access(#wm_log_data{}=LogData) ->
 
 %% @doc Close a log file.
 -spec log_close(atom(), string(), file:io_device()) -> ok | {error, term()}.
-log_close(Mod, Name, FD) ->
+log_close(_Mod, _Name, FD) ->
 %    log_info([Mod, ": closing log file: ", Name, $\n]),
     file:close(FD).
 
